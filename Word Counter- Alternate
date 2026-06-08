@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[50];
+    fgets(s,50,stdin);
+    int x = strlen(s);
+    int numword = 0;
+    int i = 0;
+    for (; s[i] == ' ' || s[i] == '\t'; i++){if (i==(x-2)){ return 0;}};
+    for (; i <= x-1; i++){
+        if (s[i] == ' ' || s[i] == '\t') {
+            numword++;
+            for (; s[i] == ' ' || s[i] == '\t'; i++){if (i==(x-2)){
+                printf("%d\n", numword);
+                return 0;
+                }
+            };
+        }
+        if (s[i] == '\n') {numword++;};
+    }
+    printf("Number of words: %d\n", numword);
+}
