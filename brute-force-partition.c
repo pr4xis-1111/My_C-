@@ -15,6 +15,8 @@ int main(void){
     return 0;
 }
 
+/* Expected outcome - { 3, 2, 4, 6, 8, 7, 9}    All Numbers smaller than pivot to left, all bigger to right*/
+
 void pivot(int arr[],int size_arr,int piv){
     int bool = 1;
     int *pivptr;
